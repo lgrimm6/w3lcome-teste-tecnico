@@ -1,11 +1,11 @@
 import { Request, Response } from "express"
-import { ITaskUpdate } from "../../interfaces/tasks"
+import { ITask, ITaskUpdate } from "../../interfaces/tasks"
 import updateTaskServices from "../../services/tasks/updateTask.services"
 
-const updateTaskController = async(req:Request, res:Response):Promise<Response>=>{
+const updateTaskController = (req: Request, res: Response): Response<ITask> => {
     const bodyRequest: ITaskUpdate = req.body
-    const taskId :Number = Number(req.params.id)
-    const updatedTask = await updateTaskServices(bodyRequest, taskId)
+    const taskId: string = req.params.id
+    const updatedTask: ITask = updateTaskServices(bodyRequest, taskId)
     return res.status(200).json(updatedTask)
 }
 
