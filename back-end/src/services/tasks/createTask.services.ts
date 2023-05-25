@@ -1,6 +1,6 @@
-import { ITask, ITaskBodyRequest } from "../../interfaces/tasks"
+import { ITask, ITaskCreate } from "../../interfaces/tasks"
 import dataBase from "../../database/index"
-const createTaskServices = async(data:ITaskBodyRequest)=>{
+const createTaskServices = async(data:ITaskCreate)=>{
     const newTask: ITask = {
         id: 1,
         titulo: data.titulo,
