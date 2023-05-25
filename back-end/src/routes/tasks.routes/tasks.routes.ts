@@ -3,12 +3,13 @@ import listAllTasksController from "../../controllers/tasks/listAllTasks.control
 import createTaskController from "../../controllers/tasks/createTaskController.controller";
 import updateTaskController from "../../controllers/tasks/updateTask.controller";
 import deleteTaskController from "../../controllers/tasks/deleteTaskController";
+import verifyIdParams from "../../middlewares/verifyIdParams";
 
 const router = Router();
 
 router.get('', listAllTasksController)
 router.post('', createTaskController)
-router.patch('/:id', updateTaskController)
-router.delete('/:id', deleteTaskController)
+router.patch('/:id', verifyIdParams, updateTaskController)
+router.delete('/:id',verifyIdParams, deleteTaskController)
 
 export default router
