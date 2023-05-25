@@ -4,4 +4,9 @@ export interface ITask {
     concluida: boolean
 }
 
-export type ITaskBodyRequest = Pick<ITask, "titulo">
+export type ITaskCreate = Pick<ITask, "titulo">
+
+export interface ITaskUpdate{
+    titulo?: string 
+    concluida?: boolean 
+}
