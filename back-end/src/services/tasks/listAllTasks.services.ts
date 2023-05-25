@@ -1,6 +1,7 @@
 import dataBase from "../../database/index"
+import { ITask } from "../../interfaces/tasks"
 
-const listAllTasksServices = async()=>{
+const listAllTasksServices = (): ITask[]=>{
     return dataBase
 }
 
