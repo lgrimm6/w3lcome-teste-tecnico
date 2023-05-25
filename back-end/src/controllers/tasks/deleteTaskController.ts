@@ -1,9 +1,10 @@
 import { Request, Response } from "express";
 import deleteTaskServices from "../../services/tasks/deleteTask.services";
 
-const deleteTaskController = async(req: Request, res: Response):Promise<Response>=>{
-    const taskId:Number = Number(req.params.id)
-    const deletedTask = deleteTaskServices(taskId)
+
+const deleteTaskController = (req: Request, res: Response): Response<void> => {
+    const taskId: string = req.params.id
+    const deletedTask:void = deleteTaskServices(taskId)
     return res.status(200).json(deletedTask)
 }
 
