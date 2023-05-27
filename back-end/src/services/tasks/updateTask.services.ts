@@ -4,8 +4,8 @@ import { AppError } from "../../errors";
 
 const updateTaskServices = (data: ITaskUpdate, taskId:string):ITask=>{
     const taskUpdate:ITaskUpdate = {}
-    data.titulo && (taskUpdate.titulo=data.titulo)
-    data.concluida && (taskUpdate.concluida=data.concluida)
+    data.hasOwnProperty('titulo') && (taskUpdate.titulo=data.titulo)
+    data.hasOwnProperty('concluida') && (taskUpdate.concluida=data.concluida)
 
     const taskIndex = dataBase.findIndex(task => task.id === taskId)
 
