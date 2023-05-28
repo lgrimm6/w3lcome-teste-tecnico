@@ -1,7 +1,13 @@
 import HomePage from "./Page/Home";
-
+import Global from "./styles/global";
+import { TaskProvider } from "./Context/index.tsx";
 function App() {
-  return <HomePage />
+  return (
+    <TaskProvider>
+      <Global />
+      <HomePage />
+    </TaskProvider>
+  );
 }
 
-export default App
+export default App;
