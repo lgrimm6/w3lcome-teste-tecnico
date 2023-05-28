@@ -1,10 +1,10 @@
 # W3lcome-teste-tecnico
 
-Este repositório contém o código-fonte de um projeto denominado W3lcome-teste-tecnico. O projeto é dividido em duas partes: o Back-End e o Front-End. Cada uma delas possui suas próprias dependências e instruções de instalação.
+Este repositório contém o código-fonte de um projeto denominado W3lcome-teste-tecnico. O projeto é dividido em duas partes: o server e o client. Cada uma delas possui suas próprias dependências e instruções de instalação.
 
-## Back-End
+## server
 
-O diretório `back-end` contém uma API REST desenvolvida em Node.js e Express.js. A API possui quatro rotas principais para manipulação de tarefas.
+O diretório `server` contém uma API REST desenvolvida em Node.js e Express.js. A API possui quatro rotas principais para manipulação de tarefas.
 
 ### Rotas
 
@@ -26,9 +26,9 @@ O diretório `back-end` contém uma API REST desenvolvida em Node.js e Express.j
 
 ### Instalação e execução
 
-Siga as instruções abaixo para instalar e executar o Back-End:
+Siga as instruções abaixo para instalar e executar o server:
 
-1. Navegue até o diretório `back-end`.
+1. Navegue até o diretório `server`.
 2. Execute o comando `yarn install` ou `npm install` para instalar as dependências.
 3. Crie um arquivo `.env` com as variáveis de ambiente necessárias, seguindo o exemplo fornecido em `.env.example`.
 4. Execute o comando `yarn dev` ou `npm run dev` para iniciar o servidor.
@@ -37,21 +37,21 @@ O servidor estará rodando na porta especificada nas variáveis de ambiente.
 
 ### WorkSpace
 
-Na raiz do diretorio back-end existe um workspace contendo todas as rotas e exemplos de request da Api. Faça o import no insomnia ou outro software similar e certifiquese de alterar a variavel `port` para testar apenas as funcionalidades da API
+Na raiz do diretorio server existe um workspace contendo todas as rotas e exemplos de request da Api. Faça o import no insomnia ou outro software similar e certifiquese de alterar a variavel `port` para testar apenas as funcionalidades da API
 
-## Front-End
+## client
 
-O diretório `front-end` contém um SPA (Single Page Application) desenvolvido em React com TypeScript. O Front-End consome a API fornecida pelo Back-End e exibe as tarefas em uma interface amigável.
+O diretório `client` contém um SPA (Single Page Application) desenvolvido em React com TypeScript. O client consome a API fornecida pelo server e exibe as tarefas em uma interface amigável.
 
 ### Instalação e execução
 
-Siga as instruções abaixo para instalar e executar o Front-End:
+Siga as instruções abaixo para instalar e executar o client:
 
-1. Navegue até o diretório `front-end`.
+1. Navegue até o diretório `client`.
 2. Execute o comando `yarn install` ou `npm install` para instalar as dependências.
 3. Execute o comando `yarn dev` ou `npm run dev` para iniciar o servidor de desenvolvimento.
 
-O servidor de desenvolvimento será iniciado e você poderá acessar o Front-End no seu navegador.
+O servidor de desenvolvimento será iniciado e você poderá acessar o client no seu navegador.
 
 Certifique-se de ter as dependências necessárias instaladas e as configurações corretas antes de executar cada parte do projeto.
 
