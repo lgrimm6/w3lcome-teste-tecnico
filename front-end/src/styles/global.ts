@@ -66,6 +66,12 @@ export default createGlobalStyle`
      };
     }
 
+    .error-input-label {
+    font-size: 1rem;
+    font-weight:500;
+    color: var(--negative)
+ };
+
     body{
         width: 100%;
         height: 100vh;
@@ -85,4 +91,4 @@ export default createGlobalStyle`
     }
     
 
-`
+`;
